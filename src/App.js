@@ -45,10 +45,20 @@ function App() {
         )); 
     }
 
+    //Add tasks 
+    const addTask = (task) => {
+        
+        const id = Math.floor(Math.random() * 10000) + 1 
+        const newTask = {id, ...task}; 
+        setTaskList([...taskList, newTask]); 
+        console.log(task);  
+        console.log(taskList); 
+    } 
+
   return (
     <div className="container">
         <Header title='Task Tracker'/> 
-        <AddTaskForm /> 
+        <AddTaskForm onSubmitForm={addTask}/> 
         {taskList.length > 0 ? 
             (<Tasks 
                 taskList={taskList} 
@@ -57,7 +67,6 @@ function App() {
             ) : 
             ('No tasks to show')
         }
-        
     </div>
   );
 }
