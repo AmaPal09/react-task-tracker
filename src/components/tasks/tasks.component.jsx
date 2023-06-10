@@ -1,5 +1,6 @@
 //tasks.components.jsx
 
+import { Fragment } from "react";
 import PropTypes from "prop-types"; 
 
 import Task from "../task/task.component";
@@ -8,12 +9,12 @@ import Task from "../task/task.component";
 const Tasks = ({ taskList }) => {
 
     return (
-        <div className='task'>
+        <Fragment>
             { taskList.map((task) => (
                 <Task key={task.id} task={task} />
                 )
             ) }
-        </div>
+        </Fragment>
     )
 }; 
 
