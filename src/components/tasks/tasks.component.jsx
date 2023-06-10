@@ -6,12 +6,12 @@ import PropTypes from "prop-types";
 import Task from "../task/task.component";
 
 
-const Tasks = ({ taskList }) => {
+const Tasks = ({ taskList, onDelete }) => {
 
     return (
         <Fragment>
             { taskList.map((task) => (
-                <Task key={task.id} task={task} />
+                <Task key={task.id} task={task} onDelete={onDelete}/>
                 )
             ) }
         </Fragment>

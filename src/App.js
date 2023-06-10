@@ -29,11 +29,20 @@ function App() {
         },
     ]);
 
+    //deleteTask -- use context later 
+    const deleteTask = (id) => { 
+        // console.log(id, 'delete');
+        setTaskList(taskList.filter((task) => task.id !== id)); 
+    }
 
   return (
     <div className="container">
         <Header title='Task Tracker'/> 
-        <Tasks taskList={taskList}/> 
+        {taskList.length > 0 ? 
+            (<Tasks taskList={taskList} onDelete={deleteTask} /> ) : 
+            ('No tasks to show')
+        }
+        
     </div>
   );
 }
