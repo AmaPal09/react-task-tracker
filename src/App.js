@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import Header from './components/header/header.component'; 
 import Tasks from './components/tasks/tasks.component';
+import AddTaskForm from './components/add-task-form/add-task-form. component';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
   return (
     <div className="container">
         <Header title='Task Tracker'/> 
+        <AddTaskForm /> 
         {taskList.length > 0 ? 
             (<Tasks 
                 taskList={taskList} 
