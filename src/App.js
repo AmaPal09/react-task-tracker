@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import Header from './components/header/header.component'; 
 import Tasks from './components/tasks/tasks.component';
-import AddTaskForm from './components/add-task-form/add-task-form. component';
+import AddTaskForm from './components/add-task-form/add-task-form.component';
 
 
 function App() {
