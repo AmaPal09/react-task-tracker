@@ -1,6 +1,6 @@
 //Apps.js 
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Header from './components/header/header.component'; 
 import Tasks from './components/tasks/tasks.component';
@@ -9,27 +9,8 @@ import AddTaskForm from './components/add-task-form/add-task-form.component';
 
 function App() {
     const [showAddTask, setShowAddTask] = useState(false); 
-
-    const [taskList, setTaskList] = useState([
-        {
-            id: 1,
-            text: 'Docs App',
-            day: 'Jul 9 at 11:00 am', 
-            reminder: true,
-        },
-        {
-            id: 2,
-            text: 'Meeting at Post',
-            day: 'Jul 12 at 2:30 am', 
-            reminder: true,
-        },
-        {
-            id: 3,
-            text: 'Grocery shopping',
-            day: 'Jul 12 at 8:00pm', 
-            reminder: false,
-        },
-    ]);
+    
+    const [taskList, setTaskList] = useState([]);
 
     //deleteTask -- use context later 
     const deleteTask = (id) => { 
