@@ -1,23 +1,16 @@
 {
-    "tasks": [
-        {
-            "id": 1,
-            "text": "Docs App",
-            "day": "Jul 9 at 11:00 am", 
-            "reminder": true
-        },
-        {
-            "id": 2,
-            "text": "Meeting at Post",
-            "day": "Jul 12 at 2:30 am", 
-            "reminder": true
-        },
-        {
-            "id": 3,
-            "text": "Grocery shopping",
-            "day": "Jul 12 at 8:00pm", 
-            "reminder": false
-        }
-    ]
-    
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Doctors Appointment",
+      "day": "Feb 5th at 2:30pm",
+      "reminder": true
+    },
+    {
+      "text": "Shop groceries",
+      "day": "Tomorrow",
+      "reminder": true,
+      "id": 2
+    }
+  ]
 }
