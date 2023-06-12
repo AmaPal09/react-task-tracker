@@ -8,6 +8,7 @@ import AddTaskForm from './components/add-task-form/add-task-form.component';
 
 
 function App() {
+    const [showAddTask, setShowAddTask] = useState(false); 
 
     const [taskList, setTaskList] = useState([
         {
@@ -57,8 +58,11 @@ function App() {
 
   return (
     <div className="container">
-        <Header title='Task Tracker'/> 
-        <AddTaskForm onSubmitForm={addTask}/> 
+        <Header 
+            title='Task Tracker' 
+            onAdd={() => setShowAddTask(!showAddTask)}
+            showAdd={showAddTask}/> 
+        {showAddTask && <AddTaskForm onSubmitForm={addTask}/> }
         {taskList.length > 0 ? 
             (<Tasks 
                 taskList={taskList} 
