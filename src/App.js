@@ -11,10 +11,32 @@ function App() {
     const [showAddTask, setShowAddTask] = useState(false); 
     
     const [taskList, setTaskList] = useState([]);
+    
+    useEffect(()=> {
+        const getTasks = async () => {
+            const tasksFromServer = await fetchTasks()
+            console.log(tasksFromServer); 
+            setTaskList(tasksFromServer)
+        } 
+        
+        getTasks(); 
+        
+    }, []);
+
+
+    //Fetch data from API 
+    async function fetchTasks() {
+        const res = await fetch('http://localhost:5100/tasks');
+        const data = await res.json();
+        return data;
+    }
 
     //deleteTask -- use context later 
-    const deleteTask = (id) => { 
+    const deleteTask = async (id) => { 
         // console.log(id, 'delete');
+        await fetch(`http://localhost:5100/tasks/${id}`, {
+            method: 'DELETE'
+        })
         setTaskList(taskList.filter((task) => task.id !== id)); 
     }
 
@@ -28,13 +50,23 @@ function App() {
     }
 
     //Add tasks 
-    const addTask = (task) => {
+    const addTask = async (task) => {
+        const res = await fetch('http://localhost:5100/tasks', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            }, 
+            body: JSON.stringify(task)
+        })
+        const data = await res.json()
+
+        setTaskList([...taskList, data]); 
         
-        const id = Math.floor(Math.random() * 10000) + 1 
-        const newTask = {id, ...task}; 
-        setTaskList([...taskList, newTask]); 
-        console.log(task);  
-        console.log(taskList); 
+        // const id = Math.floor(Math.random() * 10000) + 1 
+        // const newTask = {id, ...task}; 
+        // setTaskList([...taskList, newTask]); 
+        // console.log(task);  
+        // console.log(taskList); 
     } 
 
   return (
