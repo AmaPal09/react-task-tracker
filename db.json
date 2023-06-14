@@ -11,6 +11,12 @@
       "day": "Tomorrow",
       "reminder": true,
       "id": 2
+    },
+    {
+      "text": "new test",
+      "day": "tomorrow",
+      "reminder": false,
+      "id": 3
     }
   ]
 }

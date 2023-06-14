@@ -2,6 +2,8 @@
 
 import { useState } from 'react'; 
 
+import "./add-task-form.component.styles.css"; 
+
 // const defaultTaskForm = {
 //     task: '', 
 //     day: '',
