@@ -1,7 +1,7 @@
 //footer.component.jsx
 import { Link } from 'react-router-dom'; 
 
-import "./footer.component.styles.css"; 
+// import "./footer.component.styles.css"; 
 import { StyledFooter } from './footer.styled.component';
 
 const Footer = () => {
