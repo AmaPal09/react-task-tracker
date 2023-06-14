@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import Header from './components/header/header.component'; 
 import Tasks from './components/tasks/tasks.component';
 import AddTaskForm from './components/add-task-form/add-task-form.component';
+import Footer from './components/footer/footer.component';
 
 
 function App() {
@@ -103,6 +104,7 @@ function App() {
             ) : 
             ('No tasks to show')
         }
+        <Footer />
     </div>
   );
 }
