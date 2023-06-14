@@ -1,6 +1,8 @@
 //footer.component.jsx
 import { Link } from 'react-router-dom'; 
 
+import "./footer.component.styles.css"; 
+
 const Footer = () => {
     return(
         <footer>
