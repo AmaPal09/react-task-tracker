@@ -17,12 +17,6 @@
       "day": "monday",
       "reminder": false,
       "id": 3
-    },
-    {
-      "text": "task 2 ",
-      "day": "today",
-      "reminder": true,
-      "id": 4
     }
   ]
 }
