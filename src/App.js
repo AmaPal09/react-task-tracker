@@ -98,17 +98,22 @@ function App() {
             title='Task Tracker' 
             onAdd={() => setShowAddTask(!showAddTask)}
             showAdd={showAddTask}/> 
-        {showAddTask && <AddTaskForm onSubmitForm={addTask}/> }
-        {taskList.length > 0 ? 
-            (<Tasks 
-                taskList={taskList} 
-                onDelete={deleteTask} 
-                onToggle={toggleReminder} /> 
-            ) : 
-            ('No tasks to show')
-        }
+        
         <Routes> 
-        <Route path="/About" Component={About}/>
+            <Route path="/" true element= {
+                <>
+                    {showAddTask && <AddTaskForm onSubmitForm={addTask}/> }
+                    {taskList.length > 0 ? 
+                        (<Tasks 
+                            taskList={taskList} 
+                            onDelete={deleteTask} 
+                            onToggle={toggleReminder} /> 
+                        ) : 
+                        ('No tasks to show')
+                    }
+                </>
+            }></Route>
+        <Route path="/About" element={<About />}/>
         </Routes>
         <Footer />
     </div>
