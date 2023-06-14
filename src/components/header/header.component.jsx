@@ -4,6 +4,7 @@ import Button from '../button/button.component';
 import PropTypes from 'prop-types'; 
 import { useLocation } from 'react-router-dom'; 
 
+import "./header.component.styles.css"; 
 
 const Header = ({ title, onAdd, showAdd  }) => {
     const location = useLocation(); 

@@ -20,12 +20,12 @@ body {
   border-radius: 5px;
 }
 
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-}
+} */
 
 .btn {
   display: inline-block;
