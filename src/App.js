@@ -1,7 +1,7 @@
 //Apps.js 
 
 import { useState, useEffect, Fragment } from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import {Route, Routes} from 'react-router-dom'
 
 import Header from './components/header/header.component'; 
 import Tasks from './components/tasks/tasks.component';
@@ -84,7 +84,6 @@ function App() {
     } 
 
   return (
-    <Router>
     <div className="task-tracker-container">
         <Header 
             title='Task Tracker' 
@@ -109,7 +108,6 @@ function App() {
         </Routes>
         <Footer />
     </div>
-    </Router>
   );
 }
 
