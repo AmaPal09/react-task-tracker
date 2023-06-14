@@ -83,12 +83,6 @@ function App() {
         const data = await res.json()
 
         setTaskList([...taskList, data]); 
-        
-        // const id = Math.floor(Math.random() * 10000) + 1 
-        // const newTask = {id, ...task}; 
-        // setTaskList([...taskList, newTask]); 
-        // console.log(task);  
-        // console.log(taskList); 
     } 
 
   return (
