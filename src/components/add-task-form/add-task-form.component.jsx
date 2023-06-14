@@ -51,7 +51,8 @@ const AddTaskForm = ({onSubmitForm}) => {
             <input 
                 type="submit" 
                 value="Save Task" 
-                className="btn btn-block" /> 
+                // className="btn btn-block" 
+                className="submit-btn"/> 
         </form>
     )
 }; 

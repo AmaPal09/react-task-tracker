@@ -1,6 +1,8 @@
 //button.component.jsx
 import PropTypes from 'prop-types'; 
 
+import './button.component.styles.css'; 
+
 
 const Button = ({ color, text, onClick}) => {
     return(
