@@ -1,11 +1,13 @@
 //Apps.js 
 
 import { useState, useEffect } from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 import Header from './components/header/header.component'; 
 import Tasks from './components/tasks/tasks.component';
 import AddTaskForm from './components/add-task-form/add-task-form.component';
 import Footer from './components/footer/footer.component';
+import About from './components/about/about.component';
 
 
 function App() {
@@ -90,6 +92,7 @@ function App() {
     } 
 
   return (
+    <Router>
     <div className="container">
         <Header 
             title='Task Tracker' 
@@ -104,8 +107,12 @@ function App() {
             ) : 
             ('No tasks to show')
         }
+        <Routes> 
+        <Route path="/About" Component={About}/>
+        </Routes>
         <Footer />
     </div>
+    </Router>
   );
 }
 
