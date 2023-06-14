@@ -11,8 +11,7 @@ import About from './components/about/about.component';
 
 
 function App() {
-    const [showAddTask, setShowAddTask] = useState(false); 
-    
+    const [showAddTask, setShowAddTask] = useState(false);     
     const [taskList, setTaskList] = useState([]);
     
     useEffect(()=> {
@@ -22,8 +21,7 @@ function App() {
             setTaskList(tasksFromServer)
         } 
         
-        getTasks(); 
-        
+        getTasks();         
     }, []);
 
     //Fetch tasks from API 
@@ -107,7 +105,7 @@ function App() {
                     }
                 </Fragment>
             }></Route>
-        <Route path="/About" element={<About />}/>
+            <Route path="/About" element={<About />}/>
         </Routes>
         <Footer />
     </div>

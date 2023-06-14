@@ -17,6 +17,12 @@
       "day": "tomorrow",
       "reminder": false,
       "id": 3
+    },
+    {
+      "text": "school meeting",
+      "day": "monday",
+      "reminder": false,
+      "id": 4
     }
   ]
 }
