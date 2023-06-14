@@ -13,16 +13,10 @@
       "id": 2
     },
     {
-      "text": "new test",
-      "day": "tomorrow",
+      "text": "new task",
+      "day": "today",
       "reminder": false,
       "id": 3
-    },
-    {
-      "text": "school meeting",
-      "day": "monday",
-      "reminder": false,
-      "id": 4
     }
   ]
 }

@@ -2,6 +2,9 @@
 
 import { FaTimes } from 'react-icons/fa'; 
 
+import './task.component.styles.css'; 
+
+
 const Task = ({ task, onDelete, onToggle }) => {
     return (
         <div 
