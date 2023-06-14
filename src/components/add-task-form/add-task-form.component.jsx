@@ -4,24 +4,8 @@ import { useState } from 'react';
 
 import "./add-task-form.component.styles.css"; 
 
-// const defaultTaskForm = {
-//     task: '', 
-//     day: '',
-//     reminder: null, 
-// }
 
 const AddTaskForm = ({onSubmitForm}) => {
-    
-    // const [taskForm, setTaskForm] = useState(defaultTaskForm); 
-
-    // const resetTaskForm = () => {
-    //     setTaskForm(defaultTaskForm); 
-    // }
-
-    // const onChangeHandler = (e) => {
-    //     console.log(e); 
-    // }
-
     const [text, setText] = useState('');  
     const [day, setDay] = useState('');  
     const [reminder, setReminder] = useState(false);  
