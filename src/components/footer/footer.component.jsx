@@ -2,13 +2,14 @@
 import { Link } from 'react-router-dom'; 
 
 import "./footer.component.styles.css"; 
+import { StyledFooter } from './footer.styled.component';
 
 const Footer = () => {
     return(
-        <footer>
+        <StyledFooter>
             <p>Copyright &copy; 2023</p>
             <Link to="/about">About</Link>
-        </footer>
+        </StyledFooter>
     )
 }; 
 
