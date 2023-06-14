@@ -93,7 +93,7 @@ function App() {
 
   return (
     <Router>
-    <div className="container">
+    <div className="task-tracker-container">
         <Header 
             title='Task Tracker' 
             onAdd={() => setShowAddTask(!showAddTask)}
