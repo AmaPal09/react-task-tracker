@@ -1,6 +1,6 @@
 //Apps.js 
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 import Header from './components/header/header.component'; 
@@ -95,7 +95,7 @@ function App() {
         
         <Routes> 
             <Route path="/" true element= {
-                <>
+                <Fragment>
                     {showAddTask && <AddTaskForm onSubmitForm={addTask}/> }
                     {taskList.length > 0 ? 
                         (<Tasks 
@@ -105,7 +105,7 @@ function App() {
                         ) : 
                         ('No tasks to show')
                     }
-                </>
+                </Fragment>
             }></Route>
         <Route path="/About" element={<About />}/>
         </Routes>
