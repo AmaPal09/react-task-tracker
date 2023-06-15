@@ -14,7 +14,6 @@ import About from '../../components/about/about.component';
 
 function Home() {
     const { showAddTask } = useContext(OnAddContext);  
-    // const [showAddTask, setShowAddTask] = useState(false);     
     const [taskList, setTaskList] = useState([]);
     
     useEffect(()=> {
@@ -88,12 +87,7 @@ function Home() {
 
   return (
     <div className="task-tracker-container">
-        <Header 
-            title='Task Tracker' 
-            // onAdd={() => setShowAddTask(!showAddTask)}
-            // showAdd={showAddTask}/> 
-        /> 
-        
+        <Header title='Task Tracker' /> 
         <Routes> 
             <Route path="/" true element= {
                 <Fragment>

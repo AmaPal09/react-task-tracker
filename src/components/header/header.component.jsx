@@ -1,15 +1,14 @@
 //header.component.jsx
-import Button from '../button/button.component';
 
 import PropTypes from 'prop-types'; 
 import { useLocation } from 'react-router-dom'; 
 import { useContext } from 'react';
 
-// import "./header.component.styles.css"; 
 import { OnAddContext } from '../../contexts/onAdd.context';
 import StyledHeader from './header.styled.component';
+import Button from '../button/button.component';
 
-// const Header = ({ title, onAdd, showAdd  }) => {
+
 const Header = ({ title }) => {
     const { showAddTask, setShowAddTask } = useContext(OnAddContext)
     const location = useLocation(); 
@@ -22,9 +21,7 @@ const Header = ({ title }) => {
         <StyledHeader>
             <h1>{title}</h1>
             { location.pathname==='/' && <Button 
-            // color={showAdd ? 'red' : 'green'} 
             color={showAddTask ? 'red' : 'green'} 
-            // text={showAdd ? 'Close' : 'Add'} 
             text={showAddTask ? 'Close' : 'Add'} 
             onClick={onAddHandler} /> }
         </StyledHeader>
