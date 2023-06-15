@@ -1,7 +1,9 @@
 //Apps.js 
 
-import { useState, useEffect, Fragment } from 'react';
+import { useState, useEffect, Fragment, useContext } from 'react';
 import {Route, Routes} from 'react-router-dom'
+
+import { OnAddContext } from '../../contexts/onAdd.context';
 
 import Header from '../../components/header/header.component'; 
 import Tasks from '../../components/tasks/tasks.component';
@@ -11,7 +13,8 @@ import About from '../../components/about/about.component';
 
 
 function Home() {
-    const [showAddTask, setShowAddTask] = useState(false);     
+    const { showAddTask } = useContext(OnAddContext);  
+    // const [showAddTask, setShowAddTask] = useState(false);     
     const [taskList, setTaskList] = useState([]);
     
     useEffect(()=> {
@@ -87,8 +90,9 @@ function Home() {
     <div className="task-tracker-container">
         <Header 
             title='Task Tracker' 
-            onAdd={() => setShowAddTask(!showAddTask)}
-            showAdd={showAddTask}/> 
+            // onAdd={() => setShowAddTask(!showAddTask)}
+            // showAdd={showAddTask}/> 
+        /> 
         
         <Routes> 
             <Route path="/" true element= {
