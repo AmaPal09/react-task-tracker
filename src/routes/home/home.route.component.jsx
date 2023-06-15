@@ -1,6 +1,6 @@
 //Apps.js 
 
-import { useState, useEffect, Fragment, useContext } from 'react';
+import { Fragment, useContext } from 'react';
 import {Route, Routes} from 'react-router-dom'
 
 import { OnAddContext } from '../../contexts/onAdd.context';
@@ -15,7 +15,7 @@ import About from '../../components/about/about.component';
 
 function Home() {
     const { showAddTask } = useContext(OnAddContext);
-    const {taskList, setTaskList, deleteTask, toggleReminder, addTask } = useContext(TaskListContext);   
+    const {taskList, deleteTask, toggleReminder, addTask } = useContext(TaskListContext);   
 
   return (
     <div className="task-tracker-container">

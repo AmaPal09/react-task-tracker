@@ -20,7 +20,7 @@ const fetchTask = async (id) =>  {
 //actual value to be accessed 
 export const TaskListContext = createContext({
     taskList: [], 
-    setTaskList: () => null, 
+    // setTaskList: () => null, 
     deleteTask: () => {}, 
     toggleReminder: () => {}, 
     addTask: () => {}, 
@@ -85,7 +85,7 @@ export const TaskListProvider = ({children}) => {
 
     const value = {
         taskList, 
-        setTaskList, 
+        // setTaskList, 
         deleteTask, 
         toggleReminder, 
         addTask, 
