@@ -1,11 +1,15 @@
 //add-task-form.component.jsx
 
-import { useState } from 'react'; 
+import { useState, useContext } from 'react'; 
+
+import { TaskListContext } from '../../contexts/taskList.context'; 
 
 import "./add-task-form.component.styles.css"; 
 
 
-const AddTaskForm = ({onSubmitForm}) => {
+// const AddTaskForm = ({onSubmitForm}) => {
+const AddTaskForm = () => {
+    const {addTask} = useContext(TaskListContext); 
     const [text, setText] = useState('');  
     const [day, setDay] = useState('');  
     const [reminder, setReminder] = useState(false);  
@@ -13,7 +17,7 @@ const AddTaskForm = ({onSubmitForm}) => {
     const submitForm = (e) => {
         e.preventDefault(); 
 
-        onSubmitForm({text, day, reminder}); 
+        addTask({text, day, reminder}); 
 
         setText(''); 
         setDay('');

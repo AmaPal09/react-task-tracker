@@ -15,7 +15,7 @@ import About from '../../components/about/about.component';
 
 function Home() {
     const { showAddTask } = useContext(OnAddContext);
-    const {taskList, deleteTask, toggleReminder, addTask } = useContext(TaskListContext);   
+    const {taskList } = useContext(TaskListContext);   
 
   return (
     <div className="task-tracker-container">
@@ -23,12 +23,14 @@ function Home() {
         <Routes> 
             <Route path="/" true element= {
                 <Fragment>
-                    {showAddTask && <AddTaskForm onSubmitForm={addTask}/> }
+                    {/* {showAddTask && <AddTaskForm onSubmitForm={addTask}/> } */}
+                    {showAddTask && <AddTaskForm /> }
                     {taskList.length > 0 ? 
                         (<Tasks 
                             taskList={taskList} 
-                            onDelete={deleteTask} 
-                            onToggle={toggleReminder} /> 
+                            // onDelete={deleteTask} 
+                            // onToggle={toggleReminder} /> 
+                        /> 
                         ) : 
                         ('No tasks to show')
                     }
