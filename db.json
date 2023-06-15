@@ -13,8 +13,8 @@
       "id": 2
     },
     {
-      "text": "new task",
-      "day": "monday",
+      "text": "test new theory",
+      "day": "tomorrow",
       "reminder": false,
       "id": 3
     }
