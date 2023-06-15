@@ -23,15 +23,9 @@ function Home() {
         <Routes> 
             <Route path="/" true element= {
                 <Fragment>
-                    {/* {showAddTask && <AddTaskForm onSubmitForm={addTask}/> } */}
                     {showAddTask && <AddTaskForm /> }
                     {taskList.length > 0 ? 
-                        (<Tasks 
-                            taskList={taskList} 
-                            // onDelete={deleteTask} 
-                            // onToggle={toggleReminder} /> 
-                        /> 
-                        ) : 
+                        (<Tasks taskList={taskList} /> ) : 
                         ('No tasks to show')
                     }
                 </Fragment>

@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import Task from "../task/task.component";
 
 
-// const Tasks = ({ taskList, onDelete, onToggle }) => {
+
 const Tasks = ({ taskList }) => {
 
     return (
@@ -15,10 +15,7 @@ const Tasks = ({ taskList }) => {
                 <Task 
                     key={task.id} 
                     task={task} 
-                    // onDelete={onDelete}
-                    // onToggle={onToggle}/>
-                />
-                )
+                />)
             ) }
         </Fragment>
     )
