@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals';
 
 import { OnAddProvider } from './contexts/onAdd.context';
+import { TaskListProvider } from './contexts/taskList.context';
 import App from './App';
 
 import './index.css';
@@ -14,7 +15,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter> 
         <OnAddProvider> 
-            <App />
+            <TaskListProvider>
+                <App />
+            </TaskListProvider>
         </OnAddProvider>
     </BrowserRouter>
   </React.StrictMode>

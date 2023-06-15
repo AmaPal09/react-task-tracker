@@ -13,16 +13,10 @@
       "id": 2
     },
     {
-      "text": "test new theory",
-      "day": "tomorrow",
-      "reminder": false,
-      "id": 3
-    },
-    {
-      "text": "other task",
-      "day": "monday",
+      "text": "new task",
+      "day": "today",
       "reminder": true,
-      "id": 4
+      "id": 3
     }
   ]
 }
