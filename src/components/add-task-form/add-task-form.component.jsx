@@ -4,7 +4,6 @@ import { useState, useContext } from 'react';
 
 import { TaskListContext } from '../../contexts/taskList.context'; 
 
-import "./add-task-form.component.styles.css"; 
 import { 
     AddForm,  
     FormControl, 
@@ -17,7 +16,6 @@ import {
 } from './add-task-form.component.styled'
 
 
-// const AddTaskForm = ({onSubmitForm}) => {
 const AddTaskForm = () => {
     const {addTask} = useContext(TaskListContext); 
     const [text, setText] = useState('');  
