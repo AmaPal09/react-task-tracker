@@ -10,7 +10,8 @@ import Header from '../../components/header/header.component';
 import Tasks from '../../components/tasks/tasks.component';
 import AddTaskForm from '../../components/add-task-form/add-task-form.component';
 import Footer from '../../components/footer/footer.component';
-import About from '../../components/about/about.component';
+// import About from '../../components/about/about.component';
+import About from '../about/about.route.component';
 
 
 function Home() {
