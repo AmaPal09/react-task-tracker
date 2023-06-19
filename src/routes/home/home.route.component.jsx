@@ -1,4 +1,4 @@
-//Apps.js 
+//home.route.component.jsx 
 
 import { Fragment, useContext } from 'react';
 import {Route, Routes} from 'react-router-dom'
@@ -10,7 +10,7 @@ import Header from '../../components/header/header.component';
 import Tasks from '../../components/tasks/tasks.component';
 import AddTaskForm from '../../components/add-task-form/add-task-form.component';
 import Footer from '../../components/footer/footer.component';
-// import About from '../../components/about/about.component';
+
 import About from '../about/about.route.component';
 
 import TaskTrackerContainer from './home.styled.route'; 
@@ -21,7 +21,6 @@ function Home() {
     const {taskList } = useContext(TaskListContext);   
 
   return (
-    // <div className="task-tracker-container">
     <TaskTrackerContainer> 
         <Header title='Task Tracker' /> 
         <Routes> 
@@ -37,7 +36,6 @@ function Home() {
             <Route path="/About" element={<About />}/>
         </Routes>
         <Footer />
-    {/* </div> */}
     </TaskTrackerContainer>
   );
 }
