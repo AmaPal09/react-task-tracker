@@ -13,13 +13,16 @@ import Footer from '../../components/footer/footer.component';
 // import About from '../../components/about/about.component';
 import About from '../about/about.route.component';
 
+import TaskTrackerContainer from './home.styled.route'; 
+
 
 function Home() {
     const { showAddTask } = useContext(OnAddContext);
     const {taskList } = useContext(TaskListContext);   
 
   return (
-    <div className="task-tracker-container">
+    // <div className="task-tracker-container">
+    <TaskTrackerContainer> 
         <Header title='Task Tracker' /> 
         <Routes> 
             <Route path="/" true element= {
@@ -34,7 +37,8 @@ function Home() {
             <Route path="/About" element={<About />}/>
         </Routes>
         <Footer />
-    </div>
+    {/* </div> */}
+    </TaskTrackerContainer>
   );
 }
 
