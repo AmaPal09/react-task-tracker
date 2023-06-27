@@ -16,6 +16,7 @@ import {
 } from './add-task-form.component.styled'
 
 
+//AddTaskForm component
 const AddTaskForm = () => {
     const {addTask} = useContext(TaskListContext); 
     const [text, setText] = useState('');  
