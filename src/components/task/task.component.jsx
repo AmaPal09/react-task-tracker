@@ -8,6 +8,8 @@ import { TaskListContext } from '../../contexts/taskList.context';
 
 import { SubHeader3, TaskContainer } from './task.styled.component';
 
+
+//Task component
 const Task = ({ task }) => {
     const {deleteTask, toggleReminder} = useContext(TaskListContext);
     

@@ -6,9 +6,8 @@ import PropTypes from "prop-types";
 import Task from "../task/task.component";
 
 
-
+//Tasks component 
 const Tasks = ({ taskList }) => {
-
     return (
         <Fragment>
             { taskList.map((task) => (
