@@ -2,6 +2,7 @@
 
 import styled from 'styled-components'; 
 
+
 const StyledButton = styled.button`
     display: inline-block;
     background: #000;
@@ -23,11 +24,5 @@ const StyledButton = styled.button`
         transform: scale(0.98);
     }
 `; 
-
-
-// .btn-block {
-//     display: block;
-//     width: 100%;
-// }
 
 export default StyledButton; 

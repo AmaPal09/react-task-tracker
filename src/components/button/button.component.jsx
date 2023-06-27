@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import StyledButton from './button.component.styled'; 
 
+//Button component 
 const Button = ({ color, text, onClick}) => {
     return(
         <StyledButton
